@@ -1,4 +1,4 @@
-- ![#f03c15] Hello world `#f03c15`
+- text in red
 
 [![Issues](https://img.shields.io/github/issues/olakunlevpn/PonziPedia-V1.5?style=flat-square)](https://github.com/olakunlevpn/PonziPedia-V1.5/issues)
 [![Stars](https://img.shields.io/github/stars/olakunlevpn/PonziPedia-V1.5)](https://github.com/olakunlevpn/PonziPedia-V1.5/stargazers)
