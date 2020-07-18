@@ -1,10 +1,7 @@
 ```diff
-- This product is currently not for sale. thanks for checking 
-- This product is currently not for sale. thanks for checking
-- This product is currently not for sale. thanks for checking
-- This product is currently not for sale. thanks for checking
-- This product is currently not for sale. thanks for checking
-- This product is currently not for sale. thanks for checking
+- This project is currently not for sale/available. thanks for checking 
+- This project is currently not for sale/available. thanks for checking
+- This project is currently not for sale/available. thanks for checking
 ```
 
 [![Issues](https://img.shields.io/github/issues/olakunlevpn/PonziPedia-V1.5?style=flat-square)](https://github.com/olakunlevpn/PonziPedia-V1.5/issues)
