@@ -1,5 +1,10 @@
 ```diff
-- # this text is highlighted in red
+- This product is currently not for sale. thanks for checking 
+- This product is currently not for sale. thanks for checking
+- This product is currently not for sale. thanks for checking
+- This product is currently not for sale. thanks for checking
+- This product is currently not for sale. thanks for checking
+- This product is currently not for sale. thanks for checking
 ```
 
 [![Issues](https://img.shields.io/github/issues/olakunlevpn/PonziPedia-V1.5?style=flat-square)](https://github.com/olakunlevpn/PonziPedia-V1.5/issues)
