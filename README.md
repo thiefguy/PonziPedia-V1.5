@@ -1,3 +1,5 @@
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
+
 [![Issues](https://img.shields.io/github/issues/olakunlevpn/PonziPedia-V1.5?style=flat-square)](https://github.com/olakunlevpn/PonziPedia-V1.5/issues)
 [![Stars](https://img.shields.io/github/stars/olakunlevpn/PonziPedia-V1.5)](https://github.com/olakunlevpn/PonziPedia-V1.5/stargazers)
 
