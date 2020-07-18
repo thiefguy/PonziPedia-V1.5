@@ -1,5 +1,5 @@
 ```diff
-## this text is highlighted in red
+- # this text is highlighted in red
 ```
 
 [![Issues](https://img.shields.io/github/issues/olakunlevpn/PonziPedia-V1.5?style=flat-square)](https://github.com/olakunlevpn/PonziPedia-V1.5/issues)
