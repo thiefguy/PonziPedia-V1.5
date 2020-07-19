@@ -16,13 +16,13 @@
 function GetActivationView($user_id)
 {
   $settings = DB::table('settings')->where('id', 1)->first();
-	$user_request = DB::table('activationfee')->where('sender_id', $user_id)->where('payment_status', '!=', 'confirm')->take(1)->orderBy('id', 'DESC')->get();
+	$user_request = DB::table('activationFee')->where('sender_id', $user_id)->where('payment_status', '!=', 'confirm')->take(1)->orderBy('id', 'DESC')->get();
 	if ($user_request) {
 		foreach ($user_request as $row) {
 			$receiver = $row->receiver_id;
       $timeCreated = $row->expiringTime;
       $timeNow = date('Y-m-d H:i:s');
-      $userTimer = DB::table('activationfee')->where('id', $row->id)->first();
+      $userTimer = DB::table('activationFee')->where('id', $row->id)->first();
       if ($timeCreated < $timeNow and $row->expiringTime != "NULL") {
          $BlockU = DB::table('users')->where('id', $user_id)->update(array('role_id' => '3'));
         if ($BlockU) {
