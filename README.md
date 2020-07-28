@@ -1,8 +1,4 @@
-```diff
-- This project is currently not for sale/available. thanks for checking 
-- This project is currently not for sale/available. thanks for checking
-- This project is currently not for sale/available. thanks for checking
-```
+
 
 [![Issues](https://img.shields.io/github/issues/olakunlevpn/PonziPedia-V1.5?style=flat-square)](https://github.com/olakunlevpn/PonziPedia-V1.5/issues)
 [![Stars](https://img.shields.io/github/stars/olakunlevpn/PonziPedia-V1.5)](https://github.com/olakunlevpn/PonziPedia-V1.5/stargazers)
@@ -114,13 +110,6 @@ Exif (optional)<br>
 Multibyte String (optional)<br>
 Internationalization (optional)<br>
 <br>
-<h2 id="item-description__native-applications-for-PonziPedia">Support Facility:</h2>
-<blockquote>
-  Please send us your product presale query, after sales developer support request, customization request and any other queries to support: <a href="https://facebook.com/olakunlevpn" rel="nofollow">Contact Me Here</a>
-</blockquote>
-<br>
-<blockquote> Contact 
-Whatsapp me !  https://wa.link/8malnt
 </blockquote>
 <h2 id="item-description__updates">Updates</h2>
  <h5 id="item-description__version-1-5-5-2-04-06-2018">
