@@ -441,6 +441,60 @@ function SettMargin($id)
   }
 }
 
+function extendMargingTimeNow($id)
+{
+ $sql = DB::table('marching')->where('id', $id)->first(); 
+
+ if ($sql) {
+  $startDates  = date('Y-m-d H:i:s');
+  $newTime    = date('Y-m-d H:i:s', strtotime('+ 12 hour', strtotime($startDates)));
+
+
+
+DB::table('marching')
+        ->where('id', $id)
+        ->update(array('expiringTime' => $newTime));
+
+
+        
+ $user = User::find($sql->sender_id);
+
+
+ if ($user->status ==2) {
+  $data = array('body' => 'Howdy, '.$user->username.' <br><br>Your account has been unsuspended and you can now login to pay your upline within next 12 hours to avoid account re-suspended. 
+<br><br>Kind regards,<br>'.COnfig::get('app.name').' Team</p>');
+
+      Mail::send('emails.email', $data, function($message) use ($user) {
+          $message->to($user->email, $user->username);
+          $message->subject(Config::get('app.name').' - Account unsuspended notification');
+
+
+      });
+}
+
+
+
+  DB::table('users')
+        ->where('id', $sql->sender_id)
+        ->update(array('status' => 1));
+
+
+
+
+  echo'<div class="alert alert-success" role="alert">
+  Merging time has been Extended successfully.
+</div>';
+     
+      }
+        else{
+   echo'<div class="alert alert-danger" role="alert">
+  We cannot process your request now please try again.
+</div>';
+}
+}
+
+
+
 
 function UnsettMargin($id)
 {
