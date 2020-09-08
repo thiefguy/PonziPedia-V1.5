@@ -9,7 +9,12 @@ if (isset($_POST['DisengageNow'])) {
 	$id       = $_POST['id'];
 	DisengageMargingNow($id);
 }
- 
+
+ if (isset($_POST['extend'])) {
+	$id       = $_POST['id'];
+	extendMargingTimeNow($id); 
+}
+
 
 if (isset($_POST['SetMargin'])) {
 	$id       = $_POST['id'];
