@@ -1346,14 +1346,12 @@ function ConfirmActivationReceiver($id,$username)
 }
 
 
-
 //Admin get All total request margin from users
 function GetAllMarginReq()
 {
   $users = DB::table('marching')->where('id', '>', 1)->get();
   foreach ($users as $row) {
- $settings = DB::table('settings')->where('id', 1)->first();
-    $pack = DB::table('packages')->where('id', $row->package_id)->first();
+  $settings = DB::table('settings')->where('id', 1)->first();
   $userSender = DB::table('userdetails')->where('userid', $row->sender_id)->first();
   $userReceiver = DB::table('userdetails')->where('userid', $row->receiver_id)->first();
     echo '<tr>
@@ -1361,9 +1359,13 @@ function GetAllMarginReq()
         <td>'.$userSender->accountname.'</td>
         <td>'.$userReceiver->accountname.'</td>
         <td>'.$settings->currency.''.$row->amount.'</td>
-        <td>'.$pack->packname.'</td>
+        <td>Custom-'.Config::get('app.name').'</td>
         <td>'.$row->payment_status.'</td>
         <td><a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$row->id.'"><button class="btn btn-primary">Disengage</button></a></td>
+        <td><form role="form" method="POST" action="" class="col-md-4">
+  <input type="hidden" name="id" value="'.$row->id.'" >
+  <input type="submit" name="extend" class="btn btn-danger" value="Extended Time" />
+</form></td>
       </tr>
 
        <div id="collapse'.$row->id.'" class="panel-collapse collapse">
@@ -1374,6 +1376,9 @@ function GetAllMarginReq()
   <input type="hidden" name="id" value="'.$row->id.'" >
   <input type="submit" name="DisengageNow" class="btn btn-danger" value="Disengage" />
 </form>
+
+
+
         
         
       </div>
@@ -1381,6 +1386,7 @@ function GetAllMarginReq()
   </div>';
   }
 }
+
 
 //Admin get All total request margin from users
 function GetAllMarginPeningReq()
