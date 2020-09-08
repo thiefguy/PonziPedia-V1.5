@@ -9,7 +9,7 @@ PonziPedia - Peer 2 Peer 50% ROI Donation System script
         <div class="js-item-description item-description has-toggle">
           <div class="user-html"><p><strong><a href="https://ponzipedia.herokuapp.com/" rel="nofollow">PonziPedia</a></strong> - Peer 2 Peer 50% ROI Donation System script, PonziPedia is the best way to start your own pair 2 pair donation website!<br>
 PonziPedia is fast, secured, and it will be regularly updated.<br>
-</p><blockquote>PonziPedia initial release v1.5</blockquote>
+</p><blockquote>PonziPedia v1.6</blockquote>
 <blockquote>Check out the complete features online <a href="https://ponzipedia.herokuapp.com/" rel="nofollow">Online Demo</a>
 </blockquote>
 <blockquote>2 Support System included!</blockquote><br>
