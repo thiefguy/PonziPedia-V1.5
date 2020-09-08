@@ -111,6 +111,17 @@ Multibyte String (optional)<br>
 Internationalization (optional)<br>
 <br>
 </blockquote>
+
+<h2 id="item-description__updates">Updates</h2>
+ <h5 id="item-description__version-1-5-5-2-09-08-2020">
+<strong>Version 1.6 </strong> 09/08/2020</h5>
+<blockquote>
+<li> Added: Activation Fees & Mergin account unsuspend button (Admin)</li>
+<li> Added: Activation Fees (You can now enable/disable only admin to recieve activation fees)</li>
+<li> Fixed: Reported Bugs..</li>
+<li> & much more...</li>
+</blockquote>
+
 <h2 id="item-description__updates">Updates</h2>
  <h5 id="item-description__version-1-5-5-2-04-06-2018">
 <strong>Version 1.5 </strong> 05/02/2019</h5>
