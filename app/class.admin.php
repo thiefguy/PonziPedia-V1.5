@@ -242,6 +242,57 @@ function StartMargin($Amount,$username,$receivername,$sendername,$package_id)
 	}
 }
 
+function extendMargingTimeNow($id)
+{
+ $sql = DB::table('activationFee')->where('id', $id)->first(); 
+
+ if ($sql) {
+  $startDates  = date('Y-m-d H:i:s');
+  $newTime    = date('Y-m-d H:i:s', strtotime('+ 12 hour', strtotime($startDates)));
+
+
+
+DB::table('activationFee')
+        ->where('id', $id)
+        ->update(array('expiringTime' => $newTime));
+
+
+        
+ $user = User::find($sql->sender_id);
+
+
+ if ($user->status ==2) {
+  $data = array('body' => 'Howdy, '.$user->username.' <br><br>Your account has been unsuspended and you can now login to pay activation fees to  your upline within next 12 hours to avoid account re-suspended. 
+<br><br>Kind regards,<br>'.COnfig::get('app.name').' Team</p>');
+
+      Mail::send('emails.email', $data, function($message) use ($user) {
+          $message->to($user->email, $user->username);
+          $message->subject(Config::get('app.name').' - Account unsuspended notification');
+
+
+      });
+}
+
+
+
+  DB::table('users')
+        ->where('id', $sql->sender_id)
+        ->update(array('status' => 1));
+
+
+
+
+  echo'<div class="alert alert-success" role="alert">
+  Activation payment time has been Extended successfully.
+</div>';
+     
+      }
+        else{
+   echo'<div class="alert alert-danger" role="alert">
+  We cannot process your request now please try again.
+</div>';
+}
+}
 
 //Admin get total help margin from users
 function GetMarginHelp()
@@ -1025,7 +1076,11 @@ function GetactivationReq()
          if ($row->payment_status =="confirm") {
            echo '<td> <a class="btn btn-danger btn-block" style="border-radius: 0px !important;">Payment Confirmed<a/></td>';
           }
-          else{ echo '<td> <a class="btn btn-success btn-block" style="border-radius: 0px !important;" data-toggle="modal" data-target="#ActionConfirmed'.$row->id.'">Confirm Payment<a/></td>';}
+          else{ echo '<td> <a class="btn btn-success btn-block" style="border-radius: 0px !important;" data-toggle="modal" data-target="#ActionConfirmed'.$row->id.'">Confirm Payment<a/></td>
+	  <td><form role="form" method="POST" action="" class="col-md-4">
+  <input type="hidden" name="id" value="'.$row->id.'" >
+  <input type="submit" name="extendTime" class="btn btn-danger" value="Extended Time" />
+</form></td>';}
 
        echo ' 
       </tr>
