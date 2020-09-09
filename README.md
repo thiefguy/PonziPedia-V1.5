@@ -122,7 +122,6 @@ Internationalization (optional)<br>
 <li> & much more...</li>
 </blockquote>
 
-<h2 id="item-description__updates">Updates</h2>
  <h5 id="item-description__version-1-5-5-2-04-06-2018">
 <strong>Version 1.5 </strong> 05/02/2019</h5>
 <blockquote>
