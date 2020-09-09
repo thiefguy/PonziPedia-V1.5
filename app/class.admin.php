@@ -491,7 +491,7 @@ function SettMargin($id)
             </div>';
   }
 }
-
+/*
 function extendMargingTimeNow($id)
 {
  $sql = DB::table('marching')->where('id', $id)->first(); 
@@ -545,7 +545,7 @@ DB::table('marching')
 }
 
 
-
+*/
 
 function UnsettMargin($id)
 {
