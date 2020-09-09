@@ -63,7 +63,7 @@ return array(
 		| The name is used in emails or page titles.
 		|
 	*/
-	'version' => 1.5,
+	'version' => 1.6,
 	
 	
 	
