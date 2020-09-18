@@ -99,6 +99,10 @@ PonziPedia is very easy to install, <a href="https://www.youtube.com/watch?v=s5q
 <li>
 <strong>Quick Start + In Depth Documentation</strong>: Install and configure the script in matter of minutes or read the in depth documentation to learn more about the script.</li>
 </ul>
+
+# Contact 
+Get support https://maylancer.org/contact/index.html
+
 <h5 id="item-description__and-so-much-more"><em>and so much more…</em></h5>
 <h2 id="item-description__requirements">Requirements:</h2>
 PHP 5.5 or Higher.<br>
