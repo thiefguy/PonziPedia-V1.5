@@ -103,7 +103,7 @@ PonziPedia is very easy to install, <a href="https://www.youtube.com/watch?v=s5q
 # Contact 
 Get support https://maylancer.org/contact/index.html
 
-For fast support and inquiry Whatsapp Me https://wa.link/zi3b0k please write directly to your case/inquiries message such as "hello, Hi, What's up, how are you" will be ignored 
+For fast support and inquiry Whatsapp Me https://wa.link/q1dmy4 please write directly to your case/inquiries message such as "hello, Hi, What's up, how are you" will be ignored 
 
 <h5 id="item-description__and-so-much-more"><em>and so much more…</em></h5>
 <h2 id="item-description__requirements">Requirements:</h2>
