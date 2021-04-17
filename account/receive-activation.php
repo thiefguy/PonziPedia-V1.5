@@ -26,41 +26,6 @@ if (isset($_POST['submitTest'])) {
 }
 
 ?>
-<?php 
-$Testimony = Session::get('Testimony');
-if ($Testimony =="") {
-  ?>
-
-<script type="text/javascript">
-    $(window).on('load',function(){
-        $('#myModal').modal('show');
-    });
-</script>
-
-
-<div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left show" style="padding-right: 15px; display: block;">
-                        <div role="document" class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 id="exampleModalLabel" class="modal-title">Confirmations</h4>
-                             
-                            </div>
-                            <div class="modal-body">
-                              <p>It has been made compulsory on all members to share their testimonial screenshot on <?php echo Config::get('app.name'); ?> telegram or our facebook otherwise, your next GH timer would be extended by 24 hours, dropping your testimonial screenshot is free and cost nothing , it rather secures your investment and boost morale of other members <?php echo Config::get('app.name'); ?>. Join our official telegram page now and share your testimonial sceenshot for this new GH.</p>
-      
-                              
-                            </div>
-                            <div class="modal-footer">
-                              <form method="POST" action="">
-     <input type="submit" class="btn btn-primary" name="submitTest" value="Share Now!" />
-   </form>
-    </div>
-    </div>
-    </div>
-    </div>
-  <?php
-}
-?>
 
 
  <div class="content-inner">
@@ -111,14 +76,7 @@ if ($Testimony =="") {
                             <li class="list-group-item">
                                 <i class="fa fa-user"></i> <a class="pull-right"><?php echo $ProfileReceiver->accountname;  ?></a>
                             </li>
-                                                            <li class="list-group-item">
-                                    <i class="fa fa-phone"></i> <a class="pull-right"><?php echo $ProfileReceiver->phonenumber;  ?></a>
-                                </li>
-                                                        <li class="list-group-item">
-                                <i class="fa fa-envelope-o"></i> <a class="pull-right"><?php echo $userReceiver->email;  ?></a>
-                            </li>
-
-
+                                         
                             <div class="box box-success">
 
                                 <div class="box-header with-border">
@@ -179,7 +137,9 @@ if ($Testimony =="") {
                   }
                    if ($CheckingMarching->payment_status == "pending" || $CheckingMarching->payment_status == "waiting") {
                   ?>
-                  <div class="work-amount card">
+                
+
+                <div class="work-amount card">
                    
                     <div class="card-body" style="padding-left: 3px;padding-right: 0px;">
 
@@ -187,69 +147,49 @@ if ($Testimony =="") {
                     
                   
                      <ul class="list-group list-group-unbordered">
-                      <?php if ($CheckingMarching->paymentMethod !="") {
-                       ?>
+                      <?php if ($CheckingMarching->paymentMethod !=""): ?>
+                       
                    <li class="list-group-item">
                     Sender's Method: <a class="pull-right"><?php echo $CheckingMarching->paymentMethod;  ?></a>
                      </li>
-                       <?
-                      }
-                      ?>
+                       <?php endif ?>
 
-                       <?php if ($CheckingMarching->senderBank !="") {
-                       ?>
+                       <?php if ($CheckingMarching->senderBank !=""): ?>
                    <li class="list-group-item">
                     Sender's Bank Bame: <a class="pull-right"><?php echo $CheckingMarching->senderBank;  ?></a>
                      </li>
-                       <?
-                      }
-                      ?>
+                     <?php endif ?>
 
 
-                       <?php if ($CheckingMarching->accountNumber !="") {
-                       ?>
+                       <?php if ($CheckingMarching->accountNumber !=""): ?>
                    <li class="list-group-item">
                     Sender's Account Number: <a class="pull-right"><?php echo $CheckingMarching->accountNumber;  ?></a>
                      </li>
-                       <?
-                      }
-                      ?>
+                      <?php endif ?>
 
-                       <?php if ($CheckingMarching->AccountName !="") {
-                       ?>
+                       <?php if ($CheckingMarching->AccountName !=""): ?>
                    <li class="list-group-item">
                     Sender's Account Name: <a class="pull-right"><?php echo $CheckingMarching->AccountName;  ?></a>
                      </li>
-                       <?
-                      }
-                      ?>
+                     <?php endif ?>
 
-                       <?php if ($CheckingMarching->depositorsName !="") {
-                       ?>
+                       <?php if ($CheckingMarching->depositorsName !=""): ?>
                    <li class="list-group-item">
                     Sender's Depositor Name: <a class="pull-right"><?php echo $CheckingMarching->depositorsName;  ?></a>
                      </li>
-                       <?
-                      }
-                      ?>
+                     <?php endif ?>
 
-                       <?php if ($CheckingMarching->paymentLocation !="") {
-                       ?>
+                       <?php if ($CheckingMarching->paymentLocation !="") : ?>
                    <li class="list-group-item">
                     Sender's Location: <a class="pull-right"><?php echo $CheckingMarching->paymentLocation;  ?></a>
                      </li>
-                       <?
-                      }
-                      ?>
+                     <?php endif ?>
 
-                      <?php if ($CheckingMarching->ProofPic !="") {
-                       ?>
+                      <?php if ($CheckingMarching->ProofPic !=""): ?>
                    <li class="list-group-item">
                     <a href="<?php echo App::url(); ?>/images/<?php echo $CheckingMarching->ProofPic;  ?>" target="_BLANK" class="pull-right"><img src="<?php echo App::url(); ?>/images/<?php echo $CheckingMarching->ProofPic;  ?>" alt="<?php echo $CheckingMarching->ProofPic;  ?>" class="img-responsive" style="width: 90%;"></a>
                      </li>
-                       <?
-                      }
-                      ?>
+                     <?php endif ?>
                     </ul>
 
                     <form method="POST" action="">
@@ -263,7 +203,7 @@ if ($Testimony =="") {
                     <input type="hidden" name="id" value="<?php echo $CheckingMarching->id; ?>">
                           <div class="form-group row" style="padding: 5px 15px;padding-left: 5px;padding-right: 5px;">       
                           
-                            <input type="submit" value="Report" name="ActivationReport" class="btn btn-danger btn-lg btn-block" style="margin-bottom: 5px;">
+                            <input type="submit" value="Report Fake Pop!" name="ActivationReport" class="btn btn-danger btn-lg btn-block" style="margin-bottom: 5px;">
                           
                         </div>
                       </form>
@@ -282,6 +222,10 @@ if ($Testimony =="") {
                      echo '  <div class="card-body text-center" style="background-color: #dc3545; color: #fff;"><h3>This payment is not understood, please contact support for possible assistant</h3></div>';
                     }
                   }
+                
+
+
+
                     ?>
             </div>
                   

@@ -242,6 +242,57 @@ function StartMargin($Amount,$username,$receivername,$sendername,$package_id)
 	}
 }
 
+function extendMargingTimeNow($id)
+{
+ $sql = DB::table('activationFee')->where('id', $id)->first(); 
+
+ if ($sql) {
+  $startDates  = date('Y-m-d H:i:s');
+  $newTime    = date('Y-m-d H:i:s', strtotime('+ 12 hour', strtotime($startDates)));
+
+
+
+DB::table('activationFee')
+        ->where('id', $id)
+        ->update(array('expiringTime' => $newTime));
+
+
+        
+ $user = User::find($sql->sender_id);
+
+
+ if ($user->status ==2) {
+  $data = array('body' => 'Howdy, '.$user->username.' <br><br>Your account has been unsuspended and you can now login to pay activation fees to  your upline within next 12 hours to avoid account re-suspended. 
+<br><br>Kind regards,<br>'.COnfig::get('app.name').' Team</p>');
+
+      Mail::send('emails.email', $data, function($message) use ($user) {
+          $message->to($user->email, $user->username);
+          $message->subject(Config::get('app.name').' - Account unsuspended notification');
+
+
+      });
+}
+
+
+
+  DB::table('users')
+        ->where('id', $sql->sender_id)
+        ->update(array('status' => 1));
+
+
+
+
+  echo'<div class="alert alert-success" role="alert">
+  Activation payment time has been Extended successfully.
+</div>';
+     
+      }
+        else{
+   echo'<div class="alert alert-danger" role="alert">
+  We cannot process your request now please try again.
+</div>';
+}
+}
 
 //Admin get total help margin from users
 function GetMarginHelp()
@@ -440,7 +491,61 @@ function SettMargin($id)
             </div>';
   }
 }
+/*
+function extendMargingTimeNow($id)
+{
+ $sql = DB::table('marching')->where('id', $id)->first(); 
 
+ if ($sql) {
+  $startDates  = date('Y-m-d H:i:s');
+  $newTime    = date('Y-m-d H:i:s', strtotime('+ 12 hour', strtotime($startDates)));
+
+
+
+DB::table('marching')
+        ->where('id', $id)
+        ->update(array('expiringTime' => $newTime));
+
+
+        
+ $user = User::find($sql->sender_id);
+
+
+ if ($user->status ==2) {
+  $data = array('body' => 'Howdy, '.$user->username.' <br><br>Your account has been unsuspended and you can now login to pay your upline within next 12 hours to avoid account re-suspended. 
+<br><br>Kind regards,<br>'.COnfig::get('app.name').' Team</p>');
+
+      Mail::send('emails.email', $data, function($message) use ($user) {
+          $message->to($user->email, $user->username);
+          $message->subject(Config::get('app.name').' - Account unsuspended notification');
+
+
+      });
+}
+
+
+
+  DB::table('users')
+        ->where('id', $sql->sender_id)
+        ->update(array('status' => 1));
+
+
+
+
+  echo'<div class="alert alert-success" role="alert">
+  Merging time has been Extended successfully.
+</div>';
+     
+      }
+        else{
+   echo'<div class="alert alert-danger" role="alert">
+  We cannot process your request now please try again.
+</div>';
+}
+}
+
+
+*/
 
 function UnsettMargin($id)
 {
@@ -971,7 +1076,11 @@ function GetactivationReq()
          if ($row->payment_status =="confirm") {
            echo '<td> <a class="btn btn-danger btn-block" style="border-radius: 0px !important;">Payment Confirmed<a/></td>';
           }
-          else{ echo '<td> <a class="btn btn-success btn-block" style="border-radius: 0px !important;" data-toggle="modal" data-target="#ActionConfirmed'.$row->id.'">Confirm Payment<a/></td>';}
+          else{ echo '<td> <a class="btn btn-success btn-block" style="border-radius: 0px !important;" data-toggle="modal" data-target="#ActionConfirmed'.$row->id.'">Confirm Payment<a/></td>
+	  <td><form role="form" method="POST" action="" class="col-md-4">
+  <input type="hidden" name="id" value="'.$row->id.'" >
+  <input type="submit" name="extendTime" class="btn btn-danger" value="Extended Time" />
+</form></td>';}
 
        echo ' 
       </tr>
@@ -1292,14 +1401,12 @@ function ConfirmActivationReceiver($id,$username)
 }
 
 
-
 //Admin get All total request margin from users
 function GetAllMarginReq()
 {
   $users = DB::table('marching')->where('id', '>', 1)->get();
   foreach ($users as $row) {
- $settings = DB::table('settings')->where('id', 1)->first();
-    $pack = DB::table('packages')->where('id', $row->package_id)->first();
+  $settings = DB::table('settings')->where('id', 1)->first();
   $userSender = DB::table('userdetails')->where('userid', $row->sender_id)->first();
   $userReceiver = DB::table('userdetails')->where('userid', $row->receiver_id)->first();
     echo '<tr>
@@ -1307,9 +1414,13 @@ function GetAllMarginReq()
         <td>'.$userSender->accountname.'</td>
         <td>'.$userReceiver->accountname.'</td>
         <td>'.$settings->currency.''.$row->amount.'</td>
-        <td>'.$pack->packname.'</td>
+        <td>Custom-'.Config::get('app.name').'</td>
         <td>'.$row->payment_status.'</td>
         <td><a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$row->id.'"><button class="btn btn-primary">Disengage</button></a></td>
+        <td><form role="form" method="POST" action="" class="col-md-4">
+  <input type="hidden" name="id" value="'.$row->id.'" >
+  <input type="submit" name="extend" class="btn btn-danger" value="Extended Time" />
+</form></td>
       </tr>
 
        <div id="collapse'.$row->id.'" class="panel-collapse collapse">
@@ -1320,6 +1431,9 @@ function GetAllMarginReq()
   <input type="hidden" name="id" value="'.$row->id.'" >
   <input type="submit" name="DisengageNow" class="btn btn-danger" value="Disengage" />
 </form>
+
+
+
         
         
       </div>
@@ -1327,6 +1441,7 @@ function GetAllMarginReq()
   </div>';
   }
 }
+
 
 //Admin get All total request margin from users
 function GetAllMarginPeningReq()

@@ -63,7 +63,25 @@ return array(
 		| The name is used in emails or page titles.
 		|
 	*/
-	'version' => 1.5,
+	'version' => 1.6,
+	
+	
+	
+	/*
+	|--------------------------------------------------------------------------
+	| Activation Fees Admin Only (
+	|--------------------------------------------------------------------------
+	|
+        | When enabled admin only will receive the whole activation fees .
+	| If disabled, user upline/referral will receive the activation 
+	| fees and if user is not referred by anyone admin will automatically 
+	| receive thw activation fees payment.
+	|
+	*/
+	'activation_fees_admin_only' =>  false,  //true or false
+
+	
+	
 
 	/*
 		|--------------------------------------------------------------------------

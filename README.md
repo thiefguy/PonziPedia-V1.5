@@ -1,3 +1,5 @@
+
+
 [![Issues](https://img.shields.io/github/issues/olakunlevpn/PonziPedia-V1.5?style=flat-square)](https://github.com/olakunlevpn/PonziPedia-V1.5/issues)
 [![Stars](https://img.shields.io/github/stars/olakunlevpn/PonziPedia-V1.5)](https://github.com/olakunlevpn/PonziPedia-V1.5/stargazers)
 
@@ -5,15 +7,15 @@
 PonziPedia - Peer 2 Peer 50% ROI Donation System script
 <div data-view="toggleItemDescription">
         <div class="js-item-description item-description has-toggle">
-          <div class="user-html"><p><strong><a href="https://ponzipedia.herokuapp.com/" rel="nofollow">PonziPedia</a></strong> - Peer 2 Peer 50% ROI Donation System script, PonziPedia is the best way to start your own pair 2 pair donation website!<br>
+          <div class="user-html"><p><strong><a href="http://mylcr.site/ponzipedia//" rel="nofollow">PonziPedia</a></strong> - Peer 2 Peer 50% ROI Donation System script, PonziPedia is the best way to start your own pair 2 pair donation website!<br>
 PonziPedia is fast, secured, and it will be regularly updated.<br>
-</p><blockquote>PonziPedia initial release v1.5</blockquote>
-<blockquote>Check out the complete features online <a href="https://ponzipedia.herokuapp.com/" rel="nofollow">Online Demo</a>
+</p><blockquote>PonziPedia v1.6</blockquote>
+<blockquote>Check out the complete features online <a href="http://mylcr.site/ponzipedia/" rel="nofollow">Online Demo</a>
 </blockquote>
 <blockquote>2 Support System included!</blockquote><br>
 <blockquote>Includes Documentation!</blockquote><br><br>
 
-PonziPedia is very easy to install, <a href="https://www.youtube.com/watch?v=s5qvuuOrhBk" rel="nofollow">Watch how to install PonziPedia</a><br> Online Documentation <a href="https://ponzipedia.herokuapp.com/documentation/">Installation Guides</a><br>
+PonziPedia is very easy to install, <a href="https://www.youtube.com/watch?v=s5qvuuOrhBk" rel="nofollow">Watch how to install PonziPedia</a><br> Online Documentation <a href="http://mylcr.site/ponzipedia/documentation/">Installation Guides</a><br>
 <br>
 
 <br>
@@ -23,11 +25,11 @@ PonziPedia is very easy to install, <a href="https://www.youtube.com/watch?v=s5q
         <blockquote><code>git clone https://github.com/olakunlevpn/PonziPedia-V1.5.git</code></blockquote>
         <blockquote><code>cd PonziPedia-V1.5 </code></blockquote>
         <blockquote><code>#Read the documentation to set up database and others its well explained</code></blockquote>
-        <blockquote><code>Online demo <a href="https://ponzipedia.herokuapp.com/admin.php">Admin panel</a> Username: admin Password: admin</code></blockquote>
-        <blockquote><code>Online demo <a href="https://ponzipedia.herokuapp.com/"> Signup to view</a></code></blockquote>
+        <blockquote><code>Online demo <a href="http://mylcr.site/ponzipedia/admin.php">Admin panel</a> Username: admin Password: admin</code></blockquote>
+        <blockquote><code>Online demo <a href="http://mylcr.site/ponzipedia/"> Signup to view</a></code></blockquote>
         
       
-<h2 id="item-description__user-features-demo">User Features  (<a href="https://ponzipedia.herokuapp.com/" rel="nofollow">Demo</a>)</h2>
+<h2 id="item-description__user-features-demo">User Features  (<a href="http://mylcr.site/ponzipedia/" rel="nofollow">Demo</a>)</h2>
 <ul>
   <li>
 <strong>High Level Cache System:</strong> The #1 thing that must be available on any high traffic website, The Speed ! We Speed up your website with our Cache system</li>
@@ -97,6 +99,12 @@ PonziPedia is very easy to install, <a href="https://www.youtube.com/watch?v=s5q
 <li>
 <strong>Quick Start + In Depth Documentation</strong>: Install and configure the script in matter of minutes or read the in depth documentation to learn more about the script.</li>
 </ul>
+
+# Contact 
+Get support https://maylancer.org/contact/index.html
+
+For fast support and inquiry Whatsapp Me https://wa.link/q1dmy4 please write directly to your case/inquiries message such as "hello, Hi, What's up, how are you" will be ignored 
+
 <h5 id="item-description__and-so-much-more"><em>and so much more…</em></h5>
 <h2 id="item-description__requirements">Requirements:</h2>
 PHP 5.5 or Higher.<br>
@@ -108,15 +116,18 @@ Exif (optional)<br>
 Multibyte String (optional)<br>
 Internationalization (optional)<br>
 <br>
-<h2 id="item-description__native-applications-for-PonziPedia">Support Facility:</h2>
-<blockquote>
-  Please send us your product presale query, after sales developer support request, customization request and any other queries to support: <a href="https://facebook.com/olakunlevpn" rel="nofollow">Contact Me Here</a>
 </blockquote>
-<br>
-<blockquote> Contact 
-Whatsapp me !  https://wa.link/8malnt
-</blockquote>
+
 <h2 id="item-description__updates">Updates</h2>
+ <h5 id="item-description__version-1-5-5-2-09-08-2020">
+<strong>Version 1.6 </strong> 09/08/2020</h5>
+<blockquote>
+<li> Added: Activation Fees & Mergin account unsuspend button (Admin)</li>
+<li> Added: Activation Fees (You can now enable/disable only admin to recieve activation fees)</li>
+<li> Fixed: Reported Bugs..</li>
+<li> & much more...</li>
+</blockquote>
+
  <h5 id="item-description__version-1-5-5-2-04-06-2018">
 <strong>Version 1.5 </strong> 05/02/2019</h5>
 <blockquote>

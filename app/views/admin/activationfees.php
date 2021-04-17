@@ -9,7 +9,11 @@ if (isset($_POST['ConfirmPayment'])) {
 	$id       = $_POST['id'];
 	ConfirmActivation($id);
 }
- 
+
+ if (isset($_POST['extendTime'])) {
+	$id       = $_POST['id'];
+	ExtendActivationTime($id);
+}
 ?>
 
 
@@ -52,7 +56,8 @@ if (isset($_POST['ConfirmPayment'])) {
 				<th>Amount</th>
 				<th>Status</th>
 				<th>POF</th>
-				<th>Action</th>
+				<th></th>
+				<th></th>
 			</tr>
 		</thead>
 
